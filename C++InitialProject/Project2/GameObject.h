@@ -75,6 +75,12 @@ public:
 		return &hitRect;
 	}
 
+	//“–‚½‚è”»’è‚Ì•\¦ŠÖ”
+	void DrawHitRect() {
+		DrawBox(hitRect.center.x - hitRect.whd.x, hitRect.center.y - hitRect.whd.y,
+			hitRect.center.x + hitRect.whd.x, hitRect.center.y + hitRect.whd.y, GetColor(255, 0, 0), true);
+	}
+
 	//AABB‚Ì“–‚½‚è”»’è‚ğì‚éB
 	bool colliderCheckAABB(int layer, int id);
 	//AABB‚Ì“–‚½‚è”»’è‚ğì‚é(2D”Å)
